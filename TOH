@@ -1,0 +1,9 @@
+def TOH(n,spole,dpole,ipole):
+    if(n==1):
+        print("move disc 1 from pole",spole,"to pole",dpole)
+        return
+    TOH(n-1,spole,ipole,dpole)
+    print("move disc",n,"from pole",spole,"to pole",dpole)
+    TOH(n-1,ipole,dpole,spole)
+n=3
+TOH(n,'A','B','C') 
